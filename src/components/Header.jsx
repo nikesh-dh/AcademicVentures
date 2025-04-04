@@ -71,8 +71,8 @@ const HeaderNav = () => {
     {
       name: "Destination",
       subItems: [
-        { name: "UK", path: "/uk" },
         { name: "USA", path: "/usa" },
+        { name: "UK", path: "/uk" },
         { name: "Malaysia", path: "/malaysia" },
         { name: "Romania", path: "/romania" },
         { name: "Malta", path: "/malta" },
@@ -104,7 +104,7 @@ const HeaderNav = () => {
         background: "linear-gradient(to right,rgb(255, 255, 255),rgb(202, 217, 251))",
         backdropFilter: "blur(10px)",
         zIndex: theme.zIndex.appBar,
-        borderBottom: "1px solid rgba(0, 122, 204, 0.1)",
+        borderBottom: "3px solid rgba(230, 55, 2, 0.56)",
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
       }}
     >
@@ -137,8 +137,8 @@ const HeaderNav = () => {
               src={logo}
               alt="Academic Ventures Logo"
               style={{
-                width: 75,
-                height: 70,
+                width: 90,
+                height: 72,
                 marginRight: 10,
                 transition: "transform 0.3s ease",
               }}
@@ -599,6 +599,7 @@ const HeaderNav = () => {
                 transform: "translateY(-2px)",
               },
               transition: "all 0.3s ease",
+              display: { xs: "none", md: "flex" },
             }}
           >
             Book Free Counseling

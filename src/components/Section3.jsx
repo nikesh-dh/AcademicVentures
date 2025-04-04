@@ -45,29 +45,14 @@ function Section3() {
   ];
   
 
-  function nextSlide() {
-    if (isTransitioning) return;
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselContent.length);
+  };
 
-    setSlideDirection("next");
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentSlide((currentSlide + 1) % carouselContent.length);
-      setIsTransitioning(false);
-    }, 500);
-  }
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselContent.length) % carouselContent.length);
+  };
 
-  function prevSlide() {
-    if (isTransitioning) return;
-
-    setSlideDirection("prev");
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentSlide(
-        currentSlide === 0 ? carouselContent.length - 1 : currentSlide - 1
-      );
-      setIsTransitioning(false);
-    }, 500);
-  }
 
   return (
     <SectionWrapper>

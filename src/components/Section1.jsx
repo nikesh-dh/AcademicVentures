@@ -207,8 +207,11 @@ const MainImage = styled.img`
   right: 0;
   top: 139px;
   object-fit: cover;
+  @media (max-width: 1700px) {
+      width: 900px;
+  }
   @media (max-width: 991px) {
-    width: 100%;
+    width: 90%;
     height: auto;
     position: relative;
     top: 40px;
